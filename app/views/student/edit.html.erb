@@ -1,0 +1,16 @@
+<h1> Edit Student </h1>
+
+<%= form_with model: @student do |form| %>
+    <%= form.text_field :first_name, placeholder: 'first name' %><br/>
+    <%= form.text_field :last_name, placeholder: 'last name' %><br/>
+    <%= form.date_field :birth_date, placeholder: 'date of birth(dd-mm-yyyy)' %><br/>
+    <%= form.text_field :department, placeholder: 'department' %><br/>
+    <%= form.submit %>
+<% end %> 
+
+   <%# t.string "first_name"
+    t.string "last_name"
+    t.date "birth_date"
+    t.string "department"
+    t.boolean "terms_of_service" %>
+    <%# <%= form.text_field :terms_of_service, placeholder: 'terms_of_service' %>
