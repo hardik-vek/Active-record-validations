@@ -1,0 +1,41 @@
+<h1> new Faculty </h1>
+
+<%= form_with model: @faculty do |form| %>
+<div>
+    <%= form.text_field :first_name, placeholder: 'first name' %><br/>
+    <% @faculty.errors.full_messages_for(:first_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+    <%= form.text_field :last_name, placeholder: 'last name' %><br/>
+    <% @faculty.errors.full_messages_for(:last_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+    <%= form.telephone_field :phone_number, placeholder: 'phone number' %><br/>
+    <% @faculty.errors.full_messages_for(:phone_number).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+    <%= form.text_field :email, placeholder: 'email' %><br/>
+    <% @faculty.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+    <%= form.date_field :birth_date, placeholder: 'date of birth(dd-mm-yyyy)' %><br/>
+    <% @faculty.errors.full_messages_for(:birth_date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+    <%= form.text_field :designation, placeholder: 'designation' %><br/>
+    <% @faculty.errors.full_messages_for(:designation).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+    <%= form.submit %>
+<% end %> 
